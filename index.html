@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,7 +29,7 @@
           <a href="./index.html" class="link logo-link"
             >Web<span class="logo-accent">Studio</span></a
           >
-          <ul class="list">
+          <ul class="list nav-list">
             <li>
               <a href="./index.html" class="link nav-link current">Studio</a>
             </li>
@@ -38,21 +39,30 @@
             <li><a href="" class="link nav-link">Contacts</a></li>
           </ul>
         </nav>
-        <!-- Contacts -->
-        <address class="address">
-          <ul class="list">
-            <li>
+        <!-- Address -->
+        <address class="address address-list menu">
+          <ul class="list address-list-style">
+            <li class="address-list-item">
               <a class="link contact-link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="link contact-link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
+              <a class="link contact-link" href="tel:+110001111111">
+                +11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle js-open-menu style-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-Vector-1"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -60,7 +70,7 @@
       <!--section 1-->
 
       <section class="section-one">
-        <div class="container">
+        <div class="section-one-container container">
           <h1 class="section-one-title">
             Effective Solutions for Your Business
           </h1>
@@ -75,7 +85,7 @@
       <section class="section-two">
         <div class="container">
           <h2 class="visually-hidden">Description of the company</h2>
-          <ul class="list">
+          <ul class="list section-two-list">
             <li class="list-item">
               <div class="icon-wrapper">
                 <svg width="64" height="64">
@@ -163,9 +173,9 @@
 
       <!-- Section 4-->
       <section class="section-four">
-        <div class="container">
+        <div class="container section-four-container">
           <h2 class="section-four-title">Our Team</h2>
-          <ul class="list">
+          <ul class="list section-four-list">
             <li class="hero-list-item">
               <img
                 class="image"
@@ -340,7 +350,7 @@
 
       <!-- Section 5-->
       <section class="section-five">
-        <div class="container">
+        <div class="container section-five-container">
           <h2 class="section-five-title">Customers</h2>
           <ul class="list section-five-list">
             <li class="customers-list-item">
@@ -393,7 +403,7 @@
     <footer class="footer">
       <div class="container footer-box">
         <div class="with-logo-container">
-          <a class="link logo-link" href="./index.html"
+          <a class="link logo-link footer-logo" href="./index.html"
             >Web<span class="logo-accent">Studio</span></a
           >
           <p class="footer-text">
@@ -548,6 +558,73 @@
         </form>
       </div>
     </div>
+
+    <!--Mobile menu-hamburger-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="close-button js-close-menu" data-modal-close type="button">
+        <svg class="modal-icon-close" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-element">
+          <a class="link current mobile-item" href="./index.html">Studio</a>
+        </li>
+        <li class="mobile-element">
+          <a class="link mobile-item" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-element">
+          <a class="link mobile-item" href="">Contacts</a>
+        </li>
+      </ul>
+      <address class="mobile-address">
+        <ul class="mobile-address-list list">
+          <li>
+            <a class="link mobile-address-item-tel" href="tel:+110001111111">
+              +11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a class="link mobile-address-item" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </address>
+
+      <ul class="list social-mobile-list">
+        <li class="social-mobile-item">
+          <a class="mobile-social-links" href="https://instagram.com/">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram-2"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-mobile-item">
+          <a class="mobile-social-links" href="http://twitter.com/">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-mobile-item">
+          <a class="mobile-social-links" href="http://facebook.com/">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-mobile-item">
+          <a class="mobile-social-links" href="http://inkedin.com/">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin-1"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

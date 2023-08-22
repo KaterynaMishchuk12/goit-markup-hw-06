@@ -122,24 +122,33 @@ link .logo-link {
   gap: 40px;
   align-items: flex-start;
 }
+  .contact-link {
+    color: var(--slate);
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
 
 .list {
   list-style: none;
   display: flex;
 }
-
-.nav-link {
-  color: var(--navyblue);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  padding: 24px 0;
-  display: block;
-  position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .nav-link {
+    color: var(--navyblue);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    padding: 24px 0;
+    display: block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
+
 .nav-link.current:after {
   position: absolute;
   content: "";
@@ -175,6 +184,23 @@ link .nav-link {
 .cuttent {
   color: var(--ocean);
 }
+.menu-icon {
+  stroke: var(--navyblue);
+  stroke-width: 3px;
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  margin-left: auto;
+}
 
 .section-one {
   background-color: var(--navyblue);
@@ -190,17 +216,17 @@ link .nav-link {
   margin: 0 auto;
   background-size: cover;
 }
-
-.section-one-title {
-  color: var(--white);
-  text-align: center;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  max-width: 496px;
-  margin: 0 auto;
-}
+ 
+  .section-one-title {
+    color: var(--white);
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    max-width: 496px;
+    margin: 0 auto;
+  }
 
 .button {
   color: var(--white);
@@ -636,7 +662,7 @@ ul {
 .subscribe-form {
   display: flex;
   gap: 24px;
-  }
+}
 
 .subscribe-label {
   display: flex;
@@ -797,7 +823,7 @@ input::placeholder {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.callback-input:focus + .callback-icon{
+.callback-input:focus + .callback-icon {
   fill: #4d5ae5;
 }
 
@@ -852,7 +878,7 @@ input::placeholder {
   justify-content: center;
   fill: transparent;
 }
-.checkbox-input:checked + .privacy-label>.checkbox-item {
+.checkbox-input:checked + .privacy-label > .checkbox-item {
   background-color: var(--ocean);
   border: none;
   fill: var(--cloud);
@@ -885,4 +911,91 @@ input::placeholder {
 
 .privacy-policy-link {
   color: var(--iris);
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 25px;
+  background-color: var(--white);
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.mobile-menu {
+  margin: auto;
+}
+.mobile-element {
+  margin-bottom: 40px;
+}
+.mobile-item {
+  display: block;
+  text-decoration: none;
+  color: var(--navyblue);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+.mobile-address {
+  margin-bottom: 48px;
+}
+
+.mobile-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mobile-address-item-tel {
+  color: var(--ocean);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+
+.mobile-address-item {
+  color: var(--slate);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
+.social-mobile-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 328px;
+  align-items: center;
+}
+
+.social-mobile-item {
+  height: 40px;
+  width: 40px;
+}
+
+.mobile-social-links {
+  background-color: var(--iris);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
