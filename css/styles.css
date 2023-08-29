@@ -30,7 +30,8 @@ p {
   margin: 0;
 }
 ul {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
 }
@@ -38,6 +39,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -279,6 +281,11 @@ link .logo-link {
   .section-one {
     padding: 188px 0;
     max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
   }
   .section-one-title {
     font-size: 56px;
@@ -393,9 +400,12 @@ link .logo-link {
 }
 
 .hero-name {
-  display: block;
   margin-bottom: 8px;
   text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--navyblue);
 }
 
 .hero-list-item .list-text {
@@ -543,7 +553,6 @@ link .logo-link {
 .footer-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   gap: 72px;
 }
@@ -658,9 +667,6 @@ input::placeholder {
     padding-bottom: 96px;
   }
 
-  .footer .container {
-    align-items: center;
-  }
   .footer-logo {
     text-align: left;
   }
@@ -1032,6 +1038,9 @@ input::placeholder {
 
 /* mobile */
 @media (max-width: 767px) {
+  .logo-link {
+    padding: 24px 0;
+  }
   .address-list {
     display: none;
   }
@@ -1043,6 +1052,9 @@ input::placeholder {
   }
   .section-five {
     padding: 96px 0;
+  }
+  .footer-box {
+    align-items: center;
   }
   .subscribe-label {
     width: 100%;
@@ -1062,7 +1074,7 @@ input::placeholder {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office@2x.jpg);
+      url(../images/people-group@2x.jpg);
   }
 }
 
@@ -1091,7 +1103,7 @@ input::placeholder {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office@2x.jpg);
+      url(../images/people-group@2x.jpg);
   }
 }
 
@@ -1167,10 +1179,11 @@ input::placeholder {
   }
 
   .section-three {
-    display: initial;
+    display: block;
+    padding-bottom: 120px;
   }
   .section-three .container {
-    padding: 120px 0;
+    padding: 0 15px;
   }
   .section-three-title {
     color: var(--navyblue);
@@ -1198,7 +1211,7 @@ input::placeholder {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/people-office@2x.jpg);
+      url(../images/people-group@2x.jpg);
   }
 }
 
